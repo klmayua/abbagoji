@@ -1,0 +1,332 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Digital Majlis Design System - GOJI2027 */
+/* Colors from Stitch: The Statesman's Digital Command */
+
+@theme inline {
+  /* Core Surface Hierarchy - Tonal Layering System */
+  --color-surface: #f7f9ff;
+  --color-surface-bright: #f7f9ff;
+  --color-surface-dim: #c9dcf3;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #edf4ff;
+  --color-surface-container: #e3efff;
+  --color-surface-container-high: #d9eaff;
+  --color-surface-container-highest: #d1e4fb;
+  --color-surface-variant: #d1e4fb;
+  --color-surface-tint: #2a6b2c;
+
+  /* Primary - Green Palette (Trust, Growth, Islam) */
+  --color-primary: #00450d;
+  --color-primary-container: #1b5e20;
+  --color-primary-fixed: #acf4a4;
+  --color-primary-fixed-dim: #91d78a;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #90d689;
+  --color-on-primary-fixed: #002203;
+  --color-on-primary-fixed-variant: #0c5216;
+
+  /* Secondary - Gold Palette (Quality, Excellence, Premium) */
+  --color-secondary: #755b00;
+  --color-secondary-container: #fed255;
+  --color-secondary-fixed: #ffe08e;
+  --color-secondary-fixed-dim: #ecc246;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #735a00;
+  --color-on-secondary-fixed: #241a00;
+  --color-on-secondary-fixed-variant: #584400;
+
+  /* Tertiary - Blue Palette */
+  --color-tertiary: #003683;
+  --color-tertiary-container: #184da7;
+  --color-tertiary-fixed: #d9e2ff;
+  --color-tertiary-fixed-dim: #b0c6ff;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #adc4ff;
+  --color-on-tertiary-fixed: #001945;
+  --color-on-tertiary-fixed-variant: #00429c;
+
+  /* Text Colors - Never use pure black */
+  --color-on-surface: #091d2e;
+  --color-on-surface-variant: #41493e;
+  --color-on-background: #091d2e;
+
+  /* Outline/Ghost Colors - For subtle boundaries */
+  --color-outline: #717a6d;
+  --color-outline-variant: #c0c9bb;
+
+  /* Error Colors */
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #93000a;
+
+  /* Inverse Colors */
+  --color-inverse-surface: #203243;
+  --color-inverse-on-surface: #e8f2ff;
+  --color-inverse-primary: #91d78a;
+
+  /* Semantic Colors */
+  --color-success: #4CAF50;
+  --color-warning: #FF9800;
+  --color-info: #2196F3;
+
+  /* Sentiment Colors */
+  --color-sentiment-positive: #66BB6A;
+  --color-sentiment-neutral: #FFC107;
+  --color-sentiment-negative: #EF5350;
+
+  /* Priority Heatmap */
+  --color-priority-critical: #B71C1C;
+  --color-priority-high: #E65100;
+  --color-priority-medium: #F57C00;
+  --color-priority-low: #757575;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Background & Foreground shorthands */
+  --color-background: var(--color-surface);
+  --color-foreground: var(--color-on-surface);
+  --color-card: var(--color-surface-container-lowest);
+  --color-card-foreground: var(--color-on-surface);
+  --color-popover: var(--color-surface-container-highest);
+  --color-popover-foreground: var(--color-on-surface);
+  --color-muted: var(--color-surface-container-low);
+  --color-muted-foreground: var(--color-on-surface-variant);
+  --color-accent: var(--color-surface-container);
+  --color-accent-foreground: var(--color-on-surface);
+  --color-destructive: var(--color-error);
+  --color-border: var(--color-outline-variant);
+  --color-input: var(--color-surface-container-low);
+  --color-ring: var(--color-primary);
+
+  /* Chart Colors */
+  --color-chart-1: var(--color-primary);
+  --color-chart-2: var(--color-secondary);
+  --color-chart-3: var(--color-tertiary);
+  --color-chart-4: var(--color-priority-high);
+  --color-chart-5: var(--color-sentiment-positive);
+
+  /* Border Radius - Material 3 Scale */
+  --radius-none: 0;
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-full: 9999px;
+  --radius: 0.625rem;
+
+  /* Spacing Scale - Strict 4px Grid */
+  --spacing-0: 0;
+  --spacing-0-5: 0.125rem;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+  --spacing-32: 8rem;
+  --spacing-40: 10rem;
+  --spacing-48: 12rem;
+  --spacing-56: 14rem;
+  --spacing-64: 16rem;
+
+  /* Sidebar colors */
+  --color-sidebar: var(--color-surface-container-low);
+  --color-sidebar-foreground: var(--color-on-surface);
+  --color-sidebar-primary: var(--color-primary);
+  --color-sidebar-primary-foreground: var(--color-on-primary);
+  --color-sidebar-accent: var(--color-surface-container);
+  --color-sidebar-accent-foreground: var(--color-on-surface);
+  --color-sidebar-border: var(--color-outline-variant);
+  --color-sidebar-ring: var(--color-primary);
+}
+
+:root {
+  /* Default to light theme */
+  --background: #f7f9ff;
+  --foreground: #091d2e;
+}
+
+/* Dark mode - Using surface container hierarchy */
+.dark {
+  --color-surface: #0d1322;
+  --color-surface-bright: #333949;
+  --color-surface-dim: #0d1322;
+  --color-surface-container-lowest: #080e1d;
+  --color-surface-container-low: #151b2b;
+  --color-surface-container: #191f2f;
+  --color-surface-container-high: #242a3a;
+  --color-surface-container-highest: #2f3445;
+  --color-surface-variant: #2f3445;
+
+  --color-on-surface: #dde2f7;
+  --color-on-surface-variant: #c6c6cd;
+  --color-on-background: #dde2f7;
+
+  --color-outline: #909097;
+  --color-outline-variant: #45464c;
+
+  --background: #0d1322;
+  --foreground: #dde2f7;
+}
+
+@layer base {
+  * {
+    @apply border-outline-variant/15;
+  }
+
+  body {
+    @apply bg-surface text-on-surface antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  html {
+    @apply font-sans;
+    scroll-behavior: smooth;
+  }
+
+  /* Selection styling */
+  ::selection {
+    @apply bg-primary-fixed/30 text-on-surface;
+  }
+}
+
+@layer utilities {
+  /* Glassmorphism Effects - The "Glass & Gold" Signature */
+  .glass-header {
+    @apply bg-surface/80 backdrop-blur-[20px] border-b border-outline-variant/15;
+  }
+
+  .glass-card {
+    @apply bg-surface-container-lowest/90 backdrop-blur-[10px];
+  }
+
+  .glass-modal {
+    @apply bg-surface-container-high/95 backdrop-blur-[20px];
+  }
+
+  .glass-floating {
+    @apply bg-surface/60 backdrop-blur-[20px];
+    box-shadow: 0 20px 40px -10px rgba(9, 29, 46, 0.08);
+  }
+
+  /* Tonal Layering - No borders, just background shifts */
+  .tonal-container {
+    @apply bg-surface-container-low;
+  }
+
+  .tonal-card {
+    @apply bg-surface-container-lowest;
+  }
+
+  .tonal-elevated {
+    @apply bg-surface-container;
+  }
+
+  .tonal-high {
+    @apply bg-surface-container-high;
+  }
+
+  .tonal-highest {
+    @apply bg-surface-container-highest;
+  }
+
+  /* Ghost Borders - 15% opacity max */
+  .ghost-border {
+    @apply border border-outline-variant/15;
+  }
+
+  .ghost-border-b {
+    @apply border-b border-outline-variant/15;
+  }
+
+  /* Ambient Shadows - Extra diffused */
+  .ambient-shadow {
+    box-shadow: 0 20px 40px -10px rgba(9, 29, 46, 0.08);
+  }
+
+  .ambient-shadow-sm {
+    box-shadow: 0 10px 20px -5px rgba(9, 29, 46, 0.06);
+  }
+
+  .ambient-shadow-lg {
+    box-shadow: 0 30px 60px -15px rgba(9, 29, 46, 0.1);
+  }
+
+  /* Primary Gradient - Silk finish effect */
+  .gradient-primary {
+    background: linear-gradient(135deg, #00450d 0%, #1b5e20 100%);
+  }
+
+  .gradient-primary-hover {
+    background: linear-gradient(135deg, #005a11 0%, #247a2a 100%);
+  }
+
+  /* Gold Gradient - Secondary actions */
+  .gradient-gold {
+    background: linear-gradient(135deg, #755b00 0%, #c9a227 100%);
+  }
+
+  /* Section spacing - Editorial air */
+  .section-padding {
+    @apply py-20 md:py-24 lg:py-32;
+  }
+
+  .section-padding-sm {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  /* Container with max width */
+  .container-editorial {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-12;
+  }
+
+  /* Typography scales */
+  .text-display-lg {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+    letter-spacing: -0.02em;
+  }
+
+  .text-display-md {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight;
+    letter-spacing: -0.02em;
+  }
+
+  .text-headline-lg {
+    @apply text-2xl md:text-3xl font-semibold;
+  }
+
+  .text-headline-md {
+    @apply text-xl md:text-2xl font-semibold;
+  }
+
+  .text-body-lg {
+    @apply text-base md:text-lg leading-relaxed;
+    line-height: 1.6;
+  }
+
+  .text-body-md {
+    @apply text-sm md:text-base leading-relaxed;
+  }
+
+  .text-label-md {
+    @apply text-xs font-medium uppercase tracking-wide;
+    letter-spacing: 0.05em;
+  }
+}
