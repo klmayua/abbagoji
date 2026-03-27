@@ -69,8 +69,6 @@ export default function Notifications({ navigation }) {
       style={[styles.notification, item.unread && styles.notificationUnread]}
       onPress={() => {}}
     >
-      <View style={[styles.iconContainer, { backgroundColor: item.color + '15' }]} onPress={() => {}}
-    >
       <View style={[styles.iconContainer, { backgroundColor: item.color + '15' }]}>
         <Ionicons name={item.icon} size={20} color={item.color} />
       </View>

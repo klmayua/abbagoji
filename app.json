@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "GOJI2027 Digital Majlis",
+    "slug": "goji2027",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./src/assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#00450d"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.goji2027.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/adaptive-icon.png",
+        "backgroundColor": "#00450d"
+      },
+      "package": "com.goji2027.app"
+    },
+    "web": {
+      "favicon": "./src/assets/favicon.png",
+      "bundler": "webpack",
+      "output": "static",
+      "build": {
+        "output": "single"
+      }
+    },
+    "plugins": [
+      "expo-linear-gradient"
+    ]
+  }
+}
