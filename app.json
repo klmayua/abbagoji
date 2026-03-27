@@ -32,9 +32,6 @@
       "build": {
         "output": "single"
       }
-    },
-    "plugins": [
-      "expo-linear-gradient"
-    ]
+    }
   }
 }

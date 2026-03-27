@@ -1,0 +1,22 @@
+{
+  "background_color": "#00450d",
+  "description": "GOJI2027 Digital Majlis - Campaign Command Center Mobile App",
+  "display": "standalone",
+  "lang": "en",
+  "name": "GOJI2027 Digital Majlis",
+  "short_name": "GOJI2027 Digital Majlis",
+  "start_url": "/?utm_source=web_app_manifest",
+  "orientation": "portrait",
+  "related_applications": [
+    {
+      "platform": "itunes",
+      "id": "com.goji2027.app"
+    },
+    {
+      "platform": "play",
+      "url": "http://play.google.com/store/apps/details?id=com.goji2027.app",
+      "id": "com.goji2027.app"
+    }
+  ],
+  "prefer_related_applications": true
+}
